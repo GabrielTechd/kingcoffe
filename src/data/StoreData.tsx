@@ -1,4 +1,4 @@
-import StoreCard from "@/components/StoreCard";
+import StoreCard from "@/components/store/StoreCard";
 
 const stores = [
   {

@@ -1,8 +1,8 @@
 "use client"
-import HeroSection from '@/components/HeroSection';
-import QualityStandardsSection from '@/components/Features/FeaturesLojas';
-import StoresSection from '@/StoreData';
-import CtaSection from '@/components/CtaSection';
+import HeroSection from '@/components/store/Hero';
+import QualityStandardsSection from '@/components/store/FeaturesLojas';
+import StoresSection from '@/data/StoreData';
+import CtaSection from '@/components/store/CtaSection';
 
 const StoresPage = () => (
   <main className="min-h-screen">

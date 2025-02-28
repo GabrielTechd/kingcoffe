@@ -53,7 +53,7 @@ const Hero = () => {
             repeatType: "reverse",
           }}
         >
-          <a href="#descubra" className="text-white">
+          <a href="#produtos" className="text-white">
             <svg
               className="w-6 h-6"
               fill="none"

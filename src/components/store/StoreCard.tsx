@@ -2,19 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { FaMapMarkerAlt, FaPhone, FaClock } from 'react-icons/fa';
-
-type StoreProps = {
-  store: {
-    id: number;
-    name: string;
-    city: string;
-    address: string;
-    phone: string;
-    hours: string;
-    image: string;
-    description: string;
-  };
-};
+import { StoreProps } from '@/types/Store';
 
 const StoreCard = ({ store }: StoreProps) => (
   <motion.div

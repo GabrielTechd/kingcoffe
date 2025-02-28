@@ -1,8 +1,8 @@
 'use client';
-import Hero from '@/components/Hero';
-import Features from '@/components/Features/FeaturesHome';
-import ProductsSlide from '@/components/ProductsSlide';
-import Presentation from '@/components/Presentation';
+import Hero from '@/components/home/Hero';
+import Features from '@/components/home/FeaturesHome';
+import ProductsSlide from '@/components/home/ProductsSlide';
+import Presentation from '@/components/home/PresentationHome';
 
 export default function Home() {
 

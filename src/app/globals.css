@@ -52,9 +52,6 @@ body {
   transform: translateX(-50%);
 }
 
-.nav-link:hover {
-  color: var(--coffee-light);
-}
 
 .nav-link:hover::after {
   width: 100%;
@@ -96,21 +93,20 @@ body {
 .section-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--primary-color);
   margin-bottom: 2rem;
-  text-align: center;
   position: relative;
   padding-bottom: 1rem;
+  text-align: center;
 }
 
 .section-title::after {
   content: '';
   position: absolute;
-  bottom: 0;
   left: 50%;
+  bottom: 0;
   transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
+  width: 220px;
+  height: 2px;
   background: linear-gradient(to right, var(--coffee-light), var(--accent-color));
   border-radius: 2px;
 }

@@ -1,6 +1,5 @@
 'use client';
 import { motion } from 'framer-motion';
-import Header from '@/components/Header';
 import Image from 'next/image';
 import { FaCoffee, FaHistory, FaUsers, FaAward } from 'react-icons/fa';
 
@@ -40,7 +39,6 @@ export default function OurHistory() {
 
   return (
     <main className="min-h-screen">
-      <Header />
       
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center">

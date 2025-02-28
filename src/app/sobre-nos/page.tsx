@@ -1,6 +1,5 @@
 'use client';
 import { motion } from 'framer-motion';
-import Header from '@/components/Header';
 import Image from 'next/image';
 import { FaCoffee, FaLeaf, FaUsers, FaHandshake } from 'react-icons/fa';
 
@@ -34,8 +33,6 @@ export default function AboutUs() {
 
   return (
     <main className="min-h-screen bg-background-light">
-      <Header />
-      
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center">
         <Image

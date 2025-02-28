@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export const products = [
     {
@@ -123,7 +124,7 @@ const ProductsList: React.FC = () => {
         <div>
             {products.map(product => (
                 <div key={product.id}>
-                    <img src={product.image} alt={product.name} />
+                    <Image src={product.image} alt={product.name} width={500} height={500} />
                     <h2>{product.name}</h2>
                     <p>{product.description}</p>
                     <p>Price: R${product.price.toFixed(2)}</p>

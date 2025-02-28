@@ -1,13 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
-import Header from '@/components/Header';
 import { useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
-
-interface FAQItem {
-  question: string;
-  answer: string;
-}
 
 const faqSections = {
   'Pedidos': [
@@ -72,7 +66,6 @@ export default function FAQ() {
 
   return (
     <main className="min-h-screen bg-background-light">
-      <Header />
       
       {/* Hero Section */}
       <section className="bg-primary-color text-white py-20">
@@ -170,4 +163,4 @@ export default function FAQ() {
       </section>
     </main>
   );
-} 
+}

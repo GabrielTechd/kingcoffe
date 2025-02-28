@@ -2,6 +2,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCart } from '@/contexts/CartContext';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export default function Cart() {
   const { items, removeFromCart, updateQuantity, total, isCartOpen, toggleCart } = useCart();
@@ -54,10 +55,12 @@ export default function Cart() {
                         key={item.id}
                         className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg"
                       >
-                        <img
+                        <Image
                           src={item.image}
                           alt={item.name}
-                          className="w-20 h-20 object-cover rounded"
+                          width={80}
+                          height={80}
+                          className="object-cover rounded"
                         />
                         <div className="flex-1">
                           <h3 className="font-semibold text-coffee-dark">{item.name}</h3>
@@ -111,4 +114,4 @@ export default function Cart() {
       )}
     </AnimatePresence>
   );
-} 
+}

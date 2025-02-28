@@ -1,12 +1,11 @@
 'use client';
 import { motion } from 'framer-motion';
-import Header from '@/components/Header';
 import Image from 'next/image';
 import { useCart } from '@/contexts/CartContext';
 import { useState, useEffect, use } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { products } from '../page';
+import { products } from '@/data/products';
 
 const translations: { [key: string]: string } = {
   origin: 'Origem',
@@ -76,7 +75,6 @@ export default function ProductDetails({ params }: { params: Promise<{ id: strin
 
   return (
     <main className="min-h-screen bg-primary-color">
-      <Header />
       
       <ProductDetailsSection product={product} handleAddToCart={handleAddToCart} addedToCart={addedToCart} />
       <RelatedProductsSection relatedProducts={relatedProducts} />

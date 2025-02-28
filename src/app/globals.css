@@ -52,7 +52,6 @@ body {
   transform: translateX(-50%);
 }
 
-
 .nav-link:hover::after {
   width: 100%;
 }
@@ -96,15 +95,13 @@ body {
   margin-bottom: 2rem;
   position: relative;
   padding-bottom: 1rem;
-  text-align: center;
 }
 
 .section-title::after {
   content: '';
   position: absolute;
-  left: 50%;
+  left: 0;
   bottom: 0;
-  transform: translateX(-50%);
   width: 220px;
   height: 2px;
   background: linear-gradient(to right, var(--coffee-light), var(--accent-color));

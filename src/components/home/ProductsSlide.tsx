@@ -20,7 +20,7 @@ const ProductsSlide: React.FC = () => {
           variants={fadeInUp}
           className="text-center mb-12"
         >
-          <h2 className="section-title">Nossos Produtos</h2>
+          <h2 className="md:text-6xl text-4xl font-bold">Nossos Produtos</h2>
           <p className="text-lg text-gray-700">Descubra nossos cafés especiais</p>
         </motion.div>
 

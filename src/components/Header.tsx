@@ -1,9 +1,10 @@
-'use client';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaShoppingCart, FaCoffee, FaBars, FaTimes } from 'react-icons/fa';
-import { useCart } from '@/contexts/CartContext';
+"use client";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
+import { useCart } from "@/contexts/CartContext";
+import Image from "next/image";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,15 +16,17 @@ const Header = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
       <motion.header
         className={`fixed w-full z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-primary-color bg-opacity-95 shadow-lg' : 'bg-transparent'
+          isScrolled
+            ? "bg-primary-color bg-opacity-95 shadow-lg"
+            : "bg-transparent"
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -32,7 +35,13 @@ const Header = () => {
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
-              <FaCoffee className="text-3xl text-coffee-light" />
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={80} // Defina a largura da imagem
+                height={86} // Defina a altura da imagem
+                priority // Opcional: carrega a imagem de forma otimizada
+              />
               <span className="text-white text-xl font-bold">King Coffee</span>
             </Link>
 
@@ -55,7 +64,7 @@ const Header = () => {
             </div>
 
             <div className="flex items-center space-x-4">
-              <button 
+              <button
                 className="text-white hover:text-coffee-light transition-colors relative"
                 onClick={toggleCart}
               >
@@ -70,7 +79,11 @@ const Header = () => {
                 className="md:hidden text-white hover:text-coffee-light transition-colors"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               >
-                {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                {isMobileMenuOpen ? (
+                  <FaTimes size={24} />
+                ) : (
+                  <FaBars size={24} />
+                )}
               </button>
             </div>
           </nav>
@@ -81,10 +94,10 @@ const Header = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
+            initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ type: 'tween' }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ type: "tween" }}
             className="fixed inset-0 z-40 bg-primary-color md:hidden"
           >
             <div className="flex flex-col items-center justify-center h-full space-y-8 text-white">
@@ -131,4 +144,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;

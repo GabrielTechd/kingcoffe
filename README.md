@@ -2,6 +2,10 @@
 
 KingCoffee é uma plataforma online para cafeterias, construída com **Next.js**, **TypeScript** e **Tailwind CSS**. O projeto apresenta a cafeteria, seus estabelecimentos e produtos, além de funcionar como um **e-commerce** para venda de produtos.
 
+## 🌍 Link do Projeto
+
+Acesse a versão online do KingCoffee em: **[https://kingcoffee.com](https://kingcoffee.com)**
+
 ## 🚀 Tecnologias Utilizadas
 
 - [Next.js]
